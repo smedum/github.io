@@ -1,1 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Library | Eunoia's Nest</title>
+    <meta name="description" content="Complete archive of economic analysis, special reports, and insights from Eunoia's Nest">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .library-hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            padding: 120px 0 60px;
+            text-align: center;
+        }
+        
+        .filters {
+            background: #f8f9fa;
+            padding: 2rem 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .filter-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .filter-btn {
+            padding: 0.5rem 1.5rem;
+            border: 2px solid #3498db;
+            background: white;
+            color: #3498db;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background: #3498db;
+            color: white;
+        }
+        
+        .year-section {
+            margin: 3rem 0;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        .year-header {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .quarter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+        
+        .quarter-section {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #e74c3c;
+        }
+        
+        .quarter-title {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .article-list {
+            list-style: none;
+        }
+        
+        .article-item {
+            padding: 1rem 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .article-item:last-child {
+            border-bottom: none;
+        }
+        
+        .article-link {
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 500;
+            display: block;
+            transition: color 0.3s;
+        }
+        
+        .article-link:hover {
+            color: #3498db;
+        }
+        
+        .article-meta {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            margin-top: 0.25rem;
+        }
+        
+        .article-tags {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .article-tag {
+            background: #ecf0f1;
+            color: #2c3e50;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .back-to-home {
+            text-align: center;
+            margin: 3rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            .quarter-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .year-header {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Eunoia's Nest</h2>
+                <span>Gold, BRICS & Monetary Realignment</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#trends">Mega-Trends</a></li>
+                <li><a href="library.html" class="active">Article Library</a></li>
+                <li><a href="index.html#youtube">Videos</a></li>
+                <li><a href="index.html#about">About</a></li>
+            </ul>
+        </div>
+    </nav>
 
+    <!-- Library Hero -->
+    <section class="library-hero">
+        <div class="container">
+            <h1>Article Library</h1>
+            <p class="hero-description">Complete archive of economic analysis, special reports, and research insights</p>
+        </div>
+    </section>
+
+    <!-- Filters -->
+    <section class="filters">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Articles</button>
+                <button class="filter-btn" data-filter="gold">Gold & Metals</button>
+                <button class="filter-btn" data-filter="brics">BRICS</button>
+                <button class="filter-btn" data-filter="monetary">Monetary Policy</button>
+                <button class="filter-btn" data-filter="geopolitics">Geopolitics</button>
+                <button class="filter-btn" data-filter="reports">Special Reports</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Directory -->
+    <section class="article-directory">
+        <div class="container">
+            <!-- 2024 Articles -->
+            <div class="year-section">
+                <div class="year-header">
+                    <h2>2024</h2>
+                    <span class="article-count">1 Article</span>
+                </div>
+                
+                <div class="quarter-grid">
+                    <!-- Q4 -->
+                    <div class="quarter-section">
+                        <h3 class="quarter-title">Q4: Foundational Philosophy</h3>
+                        <ul class="article-list">
+                            <li class="article-item">
+                                <a href="articles/beautiful-thinking.html" class="article-link">Beautiful Thinking in an Ocean of Economic Noise</a>
+                                <div class="article-meta">October 2024 • 8 min read</div>
+                                <div class="article-tags">
+                                    <span class="article-tag">Foundational</span>
+                                    <span class="article-tag">Philosophy</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Home -->
+    <div class="back-to-home">
+        <div class="container">
+            <a href="index.html" class="btn btn-primary">
+                <i class="fas fa-arrow-left"></i>
+                Back to Homepage
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Eunoia's Nest</h4>
+                    <p>Gold, BRICS & Monetary Realignment - Tracking global capital flows.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="https://www.youtube.com/@eunoiasnest" class="social-link" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="library.html">Article Library</a></li>
+                        <li><a href="#">Research Methodology</a></li>
+                        <li><a href="#">Glossary</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Eunoia's Nest - All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple filter functionality
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active class from all buttons
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                // Add active class to clicked button
+                this.classList.add('active');
+                
+                const filter = this.getAttribute('data-filter');
+                // Filter logic would go here
+                console.log('Filtering by:', filter);
+            });
+        });
+    </script>
+</body>
